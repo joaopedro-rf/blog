@@ -15,9 +15,10 @@ Utilizando o mesmo exemplo do dicionário, abririamos aleatoriamente próximo do
 
 ## Exemplo de Busca Binária:
 
-Considere o array ordenado:  
+Considere o array ordenado:
 [1, 3, 4, 5, 6, 7, 8, 9, 10]  
-Para encontrar o número 9:
+
+**Para encontrar o número 9**
 
 - **Primeira divisão:** O elemento no meio é 5, que é menor que 9. Portanto, descartamos a metade inferior do array. O novo array é  
 [6, 7, 8, 9, 10]
@@ -35,17 +36,17 @@ Na busca binária, o número de etapas necessárias é determinado pelo logaritm
 
 - Para um array de 100 elementos:
 100 -> 50 -> 25 -> 12 -> 6 -> 3 -> 1  
-6 etapas  
+6 verificações
 
 Portanto, no pior caso, a busca binária encontra o alvo em apenas 6 etapas, comparado às 100 etapas da busca linear.
 
 ### GENERALIZAÇÃO E NOTAÇÃO BIG O
 
-Para generalizar, o número de tentativas na busca linear é proporcional ao número de elementos nnn do array, ou seja, O(n). Já na busca binária, o número de tentativas pode ser calculado usando o logaritmo base 2 de n, resultando em O(log n). O cálculo do número de etapas na busca binária é uma consequência da divisão repetida do array.
+Para generalizar, o número de tentativas na busca linear é proporcional ao número de elementos n do array, ou seja, O(n). Já na busca binária, o número de tentativas pode ser calculado usando o logaritmo base 2 de n, resultando em O(log n). O cálculo do número de etapas na busca binária é uma consequência da divisão repetida do array.
 
 ## Por que usamos o logaritmo base 2?
 
-O logaritmo base 2 responde à pergunta: "Quantas vezes podemos dividir o número nnn por 2 até restar apenas 1 elemento?" Isso reflete a maneira como a busca binária reduz o tamanho do problema pela metade em cada iteração.
+O logaritmo base 2 responde à pergunta: "Quantas vezes podemos dividir o número n por 2 até restar apenas 1 elemento?" Isso reflete a maneira como a busca binária reduz o tamanho do problema pela metade em cada iteração.
 
 ### Código Java para Busca Binária
 
