@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --sh-class: #2d5e9d;
+  --sh-identifier: #354150;
+  --sh-sign: #8996a3;
+  --sh-property: #0550ae;
+  --sh-entity: #249a97;
+  --sh-jsxliterals: #6266d1;
+  --sh-string: #00a99a;
+  --sh-keyword: #f47067;
+  --sh-comment: #a19595;
+}
+@layer base {
+  html,
+  body {
+    @apply bg-zinc-50 text-zinc-950;
+  }
+
+  article > h1,
+  article > h2,
+  article > h3,
+  article > h4,
+  article > h5,
+  article > h6 {
+    @apply text-zinc-950 font-bold my-6;
+  }
+
+  article h2 {
+    @apply uppercase tracking-wide font-normal mt-12 font-bold;
+  }
+
+  article p {
+    @apply text-zinc-700 my-4 leading-relaxed;
+  }
+
+  article ul,
+  article ol {
+    @apply text-zinc-700 my-4 pl-8;
+  }
+
+  article li {
+    @apply mb-2;
+  }
+
+  article ul {
+    @apply list-disc;
+  }
+
+  article ol {
+    @apply list-decimal;
+  }
+
+  article blockquote {
+    @apply border-l-4 border-blue-500 pl-4 my-4;
+  }
+
+  article :not(pre) > code {
+    @apply rounded ring-1 ring-zinc-950 px-1.5 py-0.5 mx-0.5 text-sm select-all text-nowrap;
+  }
+
+  article pre {
+    @apply ring-1 ring-zinc-950 p-4 my-4 overflow-x-auto text-sm;
+  }
+
+  header a,
+  article a {
+    @apply underline underline-offset-2 decoration-2 decoration-blue-500;
+  }
+
+  button,
+  a {
+    @apply active:translate-y-1 transition-all;
+  }
+}
