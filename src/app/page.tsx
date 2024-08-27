@@ -26,7 +26,7 @@ const externalLinks = [
   },
   {
     description: "X / Twitter",
-    url: "https://twitter.com/Joao_pedrorf",
+    url: "https://twitter.com/Joaopedro_rf_",
     Icon: <SiTwitter />,
   },
 ] as Link[];
