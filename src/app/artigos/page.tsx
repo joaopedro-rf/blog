@@ -15,7 +15,7 @@ export default async function ArticlesPage() {
           <Link
             className="flex items-center justify-between w-full py-2 hover:bg-zinc-100 px-4"
             key={article.id}
-            href={`/articles/${article.id}`}
+            href={`/artigos/${article.id}`}
           >
             {article.title}{" "}
             <span className="text-zinc-500">
