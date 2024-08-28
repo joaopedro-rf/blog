@@ -59,9 +59,9 @@ public static Integer binarySearch(int[] arr, int alvo) {
   while (esquerda <= direita) {
   int pivo = esquerda + (direita - esquerda) / 2;
 
-  if (arr\[pivo\] == alvo) {
+  if (arr[pivo] == alvo) {
     return pivo; // Encontrou o alvo
-  } else if (arr\[pivo\] > alvo) {
+  } else if (arr[pivo] > alvo) {
     direita = pivo - 1; // Procura na metade inferior
   } else esquerda = pivo + 1; // Procura na metade superior
   }
