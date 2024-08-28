@@ -27,11 +27,26 @@ Em uma lista com 100 elementos, a busca linear requer até 100 iterações, enqu
 Em uma lista com 1000 elementos, a busca linear requer até 1000 iterações, enquanto a busca binária requer apenas 10.
 Em uma lista com 10.000 elementos, a busca linear requer até 10.000 iterações, enquanto a busca binária requer apenas 14.
 
+### COMPLEXIDADE O(n log n)
+
+A complexidade O(nlogn) é comum em algoritmos de ordenação eficientes, como o Merge Sort e o Quick Sort. Esses algoritmos utilizam uma abordagem que divide o problema em partes menores, resolve cada uma delas separadamente e depois combina as soluções.
+
+No caso do Merge Sort, o algoritmo divide o array pela metade até que cada parte tenha apenas um elemento, e então começa a combinar essas partes ordenadamente. Esse processo de divisão ocorre em log n passos, porque a cada passo, o array é dividido pela metade. Já o processo de combinação requer O(n) operações para cada nível de divisão, resultando em uma complexidade total de O(n log n).
+A maioria das linguagens possuem implementações de algoritmos de sort nativamente, é preciso consultar a documentação para saber como é feita, mas no geral, a complexidade é O(n log n).
+
+### COMPLEXIDADE O(n^2)
+
+Algoritmos de complexidade O(n^2) como o Bubble Sort, Insertion Sort, e Selection Sort, são menos eficientes para grandes conjuntos de dados. Nesses algoritmos, o tempo de execução aumenta quadraticamente com o tamanho do input, porque cada elemento do array é comparado com todos os outros elementos. Este tipo de complexidade é considerado ineficiente para grandes inputs, porque o número de operações aumenta rapidamente à medida que o tamanho do input cresce.
+
+### IDENTIFICANDO A COMPLEXIDADE
+
+Pode ser um exercício complexo no início e requer um pouco de prática, as dicas e cortes de caminho são: procure por loops e investigue quantas vezes eles serão executados, constantes e complexidades menores são ignoradas, se seu código tiver um algoritmo que passa por um array com n posições, 2 vezes, não terá complexidade O(2 x n), apenas de O(n), e se nesse mesmo código houver algo mais complexo como um Quick Sort, será ignorado a complexidade de O(n) e passa a valer apenas o O(n log n) por ser mais custoso.
+
 ### CONCLUSÃO
 
 Como você pode ver, o crescimento do tempo de execução de um algoritmo depende da forma como ele processa os dados. O gráfico que representa o número de operações em função do tamanho do input mostra claramente que algoritmos com complexidade O(log n) crescem muito mais lentamente do que aqueles com complexidade O(n).
 
-![Gráfico das curvas de complexidade do Big O](https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1244/lectures/08-bigo/)
+![Gráfico das curvas de complexidade do Big O](https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1244/lectures/08-bigo/resources/big-o-compare.png)
 [Fonte do Gráfico](https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1244/lectures/08-bigo/)
 
-Dessa forma, a notação Big O nos permite comparar a eficiência de diferentes algoritmos em termos de como seu tempo de execução aumenta à medida que o tamanho dos dados cresce, ajudando a escolher a melhor solução para um problema específico.
+Dessa forma, a notação Big O nos permite comparar a eficiência de diferentes algoritmos em termos de como seu tempo de execução aumenta à medida que o tamanho dos dados cresce, ajudando a escolher a melhor solução para um problema específico. Irei falar mais sobre complexidade de execução durante a série de artigos relacionados a algoritmos e estrutura de dados, essa foi apenas uma introdução para que faça ao menos algum sentido quando citar a notação Big O nos próximos capítulos.
