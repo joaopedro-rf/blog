@@ -6,6 +6,7 @@ import {
 import { ArrowRight, ArrowUpRight, Download } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
+import { Analytics } from "@vercel/analytics/react"
 
 interface Link {
   description: string;
@@ -74,6 +75,7 @@ const InternalLink = (link: Link) => {
 export default function HomePage() {
   return (
     <div className="flex flex-col gap-6">
+      <Analytics />
       {externalLinks.map((link: Link) => (
         <ExternalLink
           key={link.description}
