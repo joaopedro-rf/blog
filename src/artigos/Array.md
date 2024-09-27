@@ -177,6 +177,8 @@ System.out.println(array[3]);
 // Exibe o valor da posição 3 do array
 ```
 
+Aqui está o resumo das operações, assumindo sempre o pior caso como deve ser feito na análise assintótica.
+
 ![Tabela de tempos de execução das operações do array](https://raw.githubusercontent.com/joaopedro-rf/blog/refs/heads/main/public/ArtigoArray/Tabela.png)
 
 # CONCLUSÃO
