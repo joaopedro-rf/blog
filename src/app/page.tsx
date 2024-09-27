@@ -96,13 +96,13 @@ export default function HomePage() {
         </div>
         <div className="flex gap-2 flex-col">
           <a
-            href="/public/CV-JoaoPedro.pdf"
-            download="CV-JoaoPedro.pdf"
+            href="/joao-pedro-cv.pdf"
+            download="Joao-Pedro-CV.pdf"
             className="bg-zinc-950 p-4 text-zinc-100 flex items-center gap-4 hover:bg-zinc-700 transition-all active:tranzinc-y-1"
           >
             Download do currículo
             <Download className="size-5" />
-          </a>
+          </a>          
       
         </div>
       </div>
