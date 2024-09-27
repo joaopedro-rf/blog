@@ -3,7 +3,7 @@ title: "Array"
 date: "2024-09-27"
 ---
 
-Nesta artigo, falaremos sobre Arrays, ou vetores. Um array é uma estrutura de dados usada para armazenar múltiplos valores de maneira que seja fácil acessá-los por um índice.
+Neste artigo, falaremos sobre Arrays, ou vetores. Um array é uma estrutura de dados usada para armazenar múltiplos valores de maneira que seja fácil acessá-los por um índice.
 
 Pense em uma máquina de vendas automáticas. Ela armazena diversos itens em compartimentos numerados e com uma capacidade fixa. Essa é a essência de um array: uma estrutura que armazena elementos em posições indexadas, de tamanho fixo, definido no momento de sua criação.
 ```
