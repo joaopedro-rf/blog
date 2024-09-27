@@ -105,11 +105,7 @@ array[3] = 5; // Insere o valor 5 na posição 3
 
 > Novamente, os elementos à frente precisam ser movidos para liberar espaço.
 
-| Operação  | Tempo de Execução (Pior Caso) |
-|-----------|-------------------------------|
-| Leitura   | O(1)                          |
-| Inserção  | O(N)                          |
-| Deleção   | O(N)                          |
+![Inserção no meio do array](https://raw.githubusercontent.com/joaopedro-rf/blog/refs/heads/main/public/ArtigoArray/Tabela.png)
 
 # CONCLUSÃO
 
