@@ -55,7 +55,12 @@ Os arrays suportam três operações principais:
 
 # INSERÇÃO
 
-### No final  do array
+Existem 3 formas de fazer essa operação:
+- Inserir no final do array -> O(1)
+- Inserir no início do array -> O(N)
+- Inserir no meio do array -> O(N)
+
+### Inserção no final do array
 
 Inserir no final é simples, desde que haja espaço:
 
@@ -76,11 +81,11 @@ array[tamanho] = 5; // Adiciona o 5 na última posição
 tamanho++;
 ```
 
-![Inserção no final do array](https://raw.githubusercontent.com/joaopedro-rf/blog/refs/heads/main/public/ArtigoArray/Array2.png)
+![Inserindo no final do array](https://raw.githubusercontent.com/joaopedro-rf/blog/refs/heads/main/public/ArtigoArray/Array2.png)
 
 > Se tentarmos adicionar mais um elemento, receberemos um erro, pois o array tem tamanho fixo.
 
-### No início do array
+### Inserção no início do array
 
 Inserir no início exige deslocar todos os elementos uma posição à frente, o que tem custo O(N), já que cada posição precisa ser atualizada.
 
@@ -91,9 +96,9 @@ for(int i = 4; i >= 0; i--) {
 array[0] = 5; // Insere 5 no início
 ```
 
-![Inserção no início do array](https://raw.githubusercontent.com/joaopedro-rf/blog/refs/heads/main/public/ArtigoArray/Array3.png)
+![Inserindo no início do array](https://raw.githubusercontent.com/joaopedro-rf/blog/refs/heads/main/public/ArtigoArray/Array3.png)
 
-### No meio do array
+### Inserção no meio do array
 
 ```
 for(int i = 5; i > 3; i--) {
@@ -101,9 +106,76 @@ for(int i = 5; i > 3; i--) {
 }
 array[3] = 5; // Insere o valor 5 na posição 3
 ```
-![Inserção no meio do array](https://raw.githubusercontent.com/joaopedro-rf/blog/refs/heads/main/public/ArtigoArray/Array4.png)
+![Inserindo no meio do array](https://raw.githubusercontent.com/joaopedro-rf/blog/refs/heads/main/public/ArtigoArray/Array4.png)
 
 > Novamente, os elementos à frente precisam ser movidos para liberar espaço.
+
+# DELEÇÃO
+
+A deleção em arrays apresenta o mesmo desafio que a inserção: a necessidade de deslocar elementos para manter a contiguidade da estrutura.
+
+Existem 3 formas de fazer essa operação:
+- Deletar do final do array -> O(1)
+- Deletar do início do array -> O(N)
+- Deletar do meio do array -> O(N)
+
+### Deleção no final do array
+
+Assim como a inserção no final, a deleção do último elemento é simples e exige apenas a atualização do controle de tamanho:
+
+
+```
+int[] array = new int[6];
+int tamanho = 0;
+
+for(int i = 0; i <= 5; i++) {
+    array[tamanho] = i;
+    tamanho++;
+}
+
+tamanho--;  // "Deleta" o último elemento
+```
+> Como não podemos remover fisicamente a última posição da memória, basta diminuir o tamanho do array para ignorar o último valor.
+
+![Deletando do final de um array](https://raw.githubusercontent.com/joaopedro-rf/blog/refs/heads/main/public/ArtigoArray/Array5.png)
+
+### Deleção no início do array
+
+Deletar o primeiro elemento exige mover todos os outros elementos uma posição à esquerda, para preencher o "buraco" deixado. Isso torna o tempo de execução O(N), já que cada elemento precisa ser reposicionado.
+
+![Deletando do início de um array](https://raw.githubusercontent.com/joaopedro-rf/blog/refs/heads/main/public/ArtigoArray/Array6.png)
+
+```
+for (int i = 1; i < tamanho; i++) {
+    array[i - 1] = array[i];
+}
+
+tamanho--; //Precisamos sempre manter atualizado a quantidade de elementos 
+```
+
+### Deleção no meio do array
+
+Para remover um elemento em uma posição K qualquer, é necessário deslocar todos os elementos após K uma posição à esquerda. Isso também tem complexidade O(N), pois no pior caso, pode ser necessário mover quase todos os elementos.
+
+![Deletando do meio de um array](https://raw.githubusercontent.com/joaopedro-rf/blog/refs/heads/main/public/ArtigoArray/Array7.png)
+
+```
+for (int i = 2; i < tamanho; i++) {
+    array[i - 1] = array[i];
+}
+
+tamanho--;
+```
+
+# LEITURA
+
+A leitura em arrays é sempre uma operação de tempo constante, O(1), pois o acesso a qualquer posição do array ocorre diretamente através do índice. Isso faz dos arrays uma excelente escolha quando há muitas leituras e poucas operações de inserção ou deleção.
+
+```
+System.out.println(array[3]);
+
+// Exibe o valor da posição 3 do array
+```
 
 ![Tabela de tempos de execução das operações do array](https://raw.githubusercontent.com/joaopedro-rf/blog/refs/heads/main/public/ArtigoArray/Tabela.png)
 
